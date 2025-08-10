@@ -1,23 +1,17 @@
+import {heroes} from './data/heroes';
 
-const personajes = ["IronMan", "Thor", "Hulk"];
+console.log(heroes);
 
-//El arreglo se desetructura con p1, p2, p3, y se pueden ignorar posiciones
-const [, p2, p3] = personajes;
-
-console.log( p2, p3);
-
-const retronaArreglo = () => {
-  return ["ABC", 123];
+// Esta función recibe un id y retorna el héroe cuyo id coincida con el valor recibido.
+// Utiliza el método find para buscar en el arreglo de héroes.
+const getHeroById = (id) => {
+    return heroes.find(hero => hero.id === id);
 }
+console.log(getHeroById(2));
 
-const [letras, numeros] = retronaArreglo();
-console.log(letras, numeros);
-
-const useState = (valor) => {
-  return [valor, ()=> {console.log("Hola mundo")}]
+// Esta función recibe un owner y retorna un arreglo con todos los héroes cuyo owner coincida con el valor recibido.
+// Utiliza el método filter para obtener todos los héroes que pertenecen al owner indicado.
+const getHeroesByOwner = (owner) => {
+    return heroes.filter(hero => hero.owner === owner);
 }
-
-const [nombre, setNombre] = useState("Goku");
-console.log(nombre);
-setNombre();
-arr[1]();
+console.log(getHeroesByOwner('DC'));
