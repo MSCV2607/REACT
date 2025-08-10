@@ -7,6 +7,7 @@ console.log(heroes);
 const getHeroById = (id) => {
     return heroes.find(hero => hero.id === id);
 }
+
 console.log(getHeroById(2));
 
 // Esta función recibe un owner y retorna un arreglo con todos los héroes cuyo owner coincida con el valor recibido.
