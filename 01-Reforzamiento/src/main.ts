@@ -7,6 +7,7 @@ import "./bases/03-ObjectLiteral";
 import "./bases/04-Arreglo";
 import "./bases/05-Funciones";
 import "./bases/08-ImportExport"
+import "./bases/09-Promesa"
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
    <h1> HI </h1>
